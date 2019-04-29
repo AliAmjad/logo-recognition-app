@@ -64,6 +64,8 @@ async def analyze(request):
 
     probability = probability * 100
 
+    probability = "{0:.2f}".format(probability)
+
     return JSONResponse({ 'result': str(category), 'confidence': probability })
 
 if __name__ == '__main__':
